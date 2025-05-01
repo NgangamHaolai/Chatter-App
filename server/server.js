@@ -25,7 +25,7 @@ app.use('/api', avatars);
 
 const server = createServer(app);
 const io = new Server(server, {
-    cors: { origin: 'http://localhost:5173', 
+    cors: { origin: `${process.env.CHATTER_APP_URL_CLIENT}`, 
         methods: ['GET', 'POST']}
 }); 
 SocketConnection(io);
