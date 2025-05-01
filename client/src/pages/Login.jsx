@@ -8,8 +8,8 @@ function Login()
     const navigate = useNavigate();
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    // const [usernameError, setUsernameError] = useState("");
-    // const [passwordError, setPasswordError] = useState("");
+    const [usernameError, setUsernameError] = useState("");
+    const [passwordError, setPasswordError] = useState("");
 
     const successRef = useRef(null);
     const [ loggedIn, setLoggedIn ] = useState(false);
@@ -39,15 +39,15 @@ function Login()
         }
         catch(err)
         {
-            // if(err.response.status === 404)
-            // {
-            //     // return alert(err.response.data.message);
-            //     return setUsernameError(err.response.data.message);
-            // }
-            // if(err.response.status === 401)
-            // {
-            //     return setPasswordError(err.response.data.message);
-            // }
+            if(err.response.status === 404)
+            {
+                // return alert(err.response.data.message);
+                return setUsernameError(err.response.data.message);
+            }
+            if(err.response.status === 401)
+            {
+                return setPasswordError(err.response.data.message);
+            }
             console.log(err);
         }
     }
