@@ -2,8 +2,6 @@ import axios from 'axios';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import avatarStyle from '../styles/avatars.module.css';
-import dotenv from 'dotenv';
-dotenv.config();
 
 function Avatar()
 {

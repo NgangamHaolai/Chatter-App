@@ -2,8 +2,6 @@ import axios from "axios";
 import { useState, useRef } from "react";
 import login from "../styles/login.module.css";
 import { useNavigate } from "react-router-dom";
-import dotenv from 'dotenv';
-dotenv.config();
 
 function Login()
 {        

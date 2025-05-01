@@ -2,8 +2,6 @@ import axios from "axios";
 import { useState } from "react";
 import register from "../styles/register.module.css";
 import { useNavigate } from 'react-router-dom';
-import dotenv from 'dotenv';
-dotenv.config();
 
 function Register()
 {
