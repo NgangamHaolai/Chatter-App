@@ -29,7 +29,7 @@ function Login()
         e.preventDefault();
         try
         {            
-            const response = await axios.post(`${process.env.CHATTER_APP_URL_SERVER}/api/login`, 
+            const response = await axios.post(`${import.meta.env.VITE_CHATTER_APP_URL_SERVER}/api/login`, 
                 {username: username, password: password},
             );
             // alert(response.data.message);
