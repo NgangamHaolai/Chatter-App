@@ -13,10 +13,9 @@ import avatars from './routes/avatarRoutes.js';
 import SocketConnection from "./socketHandlers/chatSocket.js";
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
 connectDB();
 
-app.use(cors());
 app.use(express.json());
 
 app.use('/api', userRoutes);
@@ -26,7 +25,9 @@ app.use('/api', avatars);
 const server = createServer(app);
 const io = new Server(server, {
     cors: { origin: process.env.CHATTER_APP_URL_CLIENT, 
-        methods: ['GET', 'POST']}
+        methods: ['GET', 'POST'],
+        credentials: true,
+    },
 }); 
 SocketConnection(io);
 

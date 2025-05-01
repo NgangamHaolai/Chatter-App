@@ -10,7 +10,7 @@ import EmojiPicker from 'emoji-picker-react';
 import { BsEmojiSmile } from "react-icons/bs";
 import { useNavigate } from 'react-router-dom';
 
-const socket = io(`${import.meta.env.VITE_CHATTER_APP_URL_SERVER}`);
+const socket = io(import.meta.env.VITE_CHATTER_APP_URL_SERVER);
 
 function Chat()
 {
@@ -100,6 +100,8 @@ function Chat()
         {
             const response = await axios.get(`${import.meta.env.VITE_CHATTER_APP_URL_SERVER}/api/chat/retrieveContacts`);
             const retrievedContacts = response.data;
+            console.log(response.data);
+            
             const ID = localStorage.getItem('ID');
 
             if(!ID)
