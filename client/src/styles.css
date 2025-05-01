@@ -1,0 +1,36 @@
+.EmojiPickerReact 
+{
+    justify-content: baseline;
+    background-color: #2d443a !important;
+    margin: auto;
+    margin-bottom: 4rem;
+    margin-left: 1rem;
+    border: none !important;
+}
+.EmojiPickerReact .epr_-8623pq 
+{
+    background-color: #31654f;
+}
+.EmojiPickerReact .epr_-99lr9q 
+{
+    background-color: #31654f;
+}
+.EmojiPickerReact .epr_3z09g4
+{
+    height: 1.5rem;
+    background-color: #2d443a;
+}
+
+.EmojiPickerReact .emoji-scroll-wrapper::-webkit-scrollbar 
+{
+    width: 5px;
+}
+@media screen and (max-width: 700px)
+{
+    .EmojiPickerReact
+    {
+        margin-bottom: 4rem;
+        margin-left: 1rem;
+    }
+}
+  

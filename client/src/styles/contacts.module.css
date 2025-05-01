@@ -1,0 +1,123 @@
+.contacts
+{
+    /* border: 1px solid #182b23; */
+    border: #153f2d;
+    border-top: none;
+    color: white;
+    overflow: scroll;
+    overflow-x: hidden;
+    padding: 0;
+}
+.header
+{
+    position: absolute;
+    background-color: #153f2d;
+    /* border: 1px solid #182b23; */
+    display: flex;
+    border-top: none;
+    width: 50%;
+    z-index: 999;
+}
+.brand_logo
+{
+    /* border: 1px solid rgb(0, 0, 0); */
+    margin: 0.68rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50px;
+    margin-left: 1rem;
+}
+.brand_name
+{
+    /* border: 1px solid wheat; */
+    margin: auto;
+    margin-left: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-large;
+}
+.settings
+{
+    margin: auto;
+    margin-right: 1rem;
+    padding: 1rem;
+    padding-top: 0rem;
+    padding-bottom: 0.5rem;
+    margin-right: 2rem;
+    border-radius: 5px;
+    background-color: aliceblue;
+    color: black;
+    box-shadow: 0 0 5px white;
+    cursor: pointer;
+}
+.settings:hover
+{
+    background-color: #28805a;
+    border: none;
+    transition: 0.5s ease;
+}
+.contactsContainer
+{
+    position: relative;
+    top: 5rem;
+    margin-top: 100px;
+    list-style-type: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+}
+.contactlist
+{
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+.contact
+{
+    background-color: #182b23;
+    display: flex;
+    /* border: 1px solid black; */
+    margin: auto;
+    height: 5rem;
+    cursor: pointer;
+}
+.contact:hover
+{
+    background-color: #2e684f;
+    transition: background-color 0.5s, opacity 0.5s;
+}
+.contact::selection
+{
+    background-color: #36b27c;
+}
+.profile_picture
+{
+    /* border: 1px solid rgb(255, 255, 255); */
+    border-radius: 50%;
+    width: fit-content;
+    width: 3rem;
+    height: auto;
+    margin: 1rem;
+}
+.profile_picture img
+{
+    width: 3rem;
+    height: auto;
+    object-fit: cover;
+}
+.profile_name
+{
+    margin: auto;
+    margin-left: 0;
+}
+.time
+{
+    margin: 1rem;
+    font-size: small;
+}
+@media screen and (max-width: 700px)
+{
+    .header
+    {
+        width: 100%;
+    }
+}

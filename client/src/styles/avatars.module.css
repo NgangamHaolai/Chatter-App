@@ -1,0 +1,100 @@
+body
+{
+    background-color: black;
+    margin: 0;
+}
+.header
+{
+    margin: auto;
+    margin-top: 3rem;
+    text-align: center;
+    font-size: x-large;
+    color: greenyellow;
+    text-shadow: 0px 0px 10px greenyellow;
+    /* border: 1px solid red; */
+}
+.container
+{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 2rem;
+    /* border: 1px solid rgb(29, 111, 76); */
+    box-shadow: 0px 0px 20px rgb(26, 175, 26);
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 2rem;   
+    margin-bottom: 2rem;
+    padding: 2rem;
+    max-width: 50%;
+    height: auto;
+}
+.Avatar
+{
+    border-radius: 100px;
+    max-width: 200px;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+}
+.selected
+{
+    box-shadow: 0px 0px 30px rgb(0, 255, 42), 0px 0px 20px white;
+}
+.avatarImage:hover
+{
+    cursor: pointer;
+    box-shadow: 0px 0px 20px greenyellow, 0px 0px 20px white;
+    transition: box-shadow 0.3s ease;
+}
+.avatarImage
+{
+    width: 100%;
+    height: auto;
+    border-radius: 100px;
+    aspect-ratio: 1 / 1;
+    box-shadow: 0px 0px 15px rgb(201, 207, 188);
+    transition: box-shadow 0.5s ease;
+}
+.submit
+{
+    display: flex;
+    font-size: large;
+    margin: auto;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    background-color: rgb(0, 0, 0);
+    border: none;
+    box-shadow: 0px 0px 10px greenyellow;
+    border-radius:10px;
+    color: greenyellow;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.submit:hover
+{
+    background-color: rgb(110, 161, 33);
+}
+@media screen and (max-width: 700px)
+{
+    .header
+    {
+        margin: auto;
+        margin-top: 10rem;
+    }
+}
+@media screen and (max-width: 500px)
+{
+    .header
+    {
+        margin: auto;
+        margin-top: 10rem;
+    }
+    .container
+    {
+        grid-template-columns: auto auto;
+        padding: 3rem;
+    }
+    .Avatar
+    {
+        margin-bottom: 0;
+    }
+}
