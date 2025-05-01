@@ -8,10 +8,12 @@ import { AiOutlineArrowLeft } from "react-icons/ai";
 import { AiOutlinePoweroff } from "react-icons/ai";
 import EmojiPicker from 'emoji-picker-react';
 import { BsEmojiSmile } from "react-icons/bs";
+import dotenv from 'dotenv';
+dotenv.config();
 
 import { useNavigate } from 'react-router-dom';
 
-const socket = io('http://localhost:3000');
+const socket = io(`${process.env.CHATTER_APP_URL}`);
 
 function Chat()
 {
@@ -99,7 +101,7 @@ function Chat()
     {
         try
         {
-            const response = await axios.get('http://localhost:3000/api/chat/retrieveContacts');
+            const response = await axios.get(`${process.env.CHATTER_APP_URL}/api/chat/retrieveContacts`);
             const retrievedContacts = response.data;
             const ID = localStorage.getItem('ID');
 
@@ -128,7 +130,7 @@ function Chat()
         {
             const currentUserID = localStorage.getItem("ID");
             
-            const response = await axios.get(`http://localhost:3000/api/chat/retrieveMessages?currentUserID=${currentUserID}&selectedUserID=${selectedUserID}`);
+            const response = await axios.get(`${process.env.CHATTER_APP_URL}/api/chat/retrieveMessages?currentUserID=${currentUserID}&selectedUserID=${selectedUserID}`);
             // console.log(response.data);
             setChat(response.data.result);
         }

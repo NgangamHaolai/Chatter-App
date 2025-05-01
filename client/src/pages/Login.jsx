@@ -2,14 +2,16 @@ import axios from "axios";
 import { useState, useRef } from "react";
 import login from "../styles/login.module.css";
 import { useNavigate } from "react-router-dom";
+import dotenv from 'dotenv';
+dotenv.config();
 
 function Login()
 {        
     const navigate = useNavigate();
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const [usernameError, setUsernameError] = useState("");
-    const [passwordError, setPasswordError] = useState("");
+    // const [usernameError, setUsernameError] = useState("");
+    // const [passwordError, setPasswordError] = useState("");
 
     const successRef = useRef(null);
     const [ loggedIn, setLoggedIn ] = useState(false);
@@ -27,7 +29,7 @@ function Login()
         e.preventDefault();
         try
         {            
-            const response = await axios.post("http://localhost:3000/api/login", 
+            const response = await axios.post(`${process.env.CHATTER_APP_URL}/api/login`, 
                 {username: username, password: password},
             );
             // alert(response.data.message);

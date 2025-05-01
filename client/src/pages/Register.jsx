@@ -2,6 +2,8 @@ import axios from "axios";
 import { useState } from "react";
 import register from "../styles/register.module.css";
 import { useNavigate } from 'react-router-dom';
+import dotenv from 'dotenv';
+dotenv.config();
 
 function Register()
 {
@@ -16,7 +18,7 @@ function Register()
         e.preventDefault();
         try
         {   
-            const response = await axios.post("http://localhost:3000/api/register",
+            const response = await axios.post(`${process.env.CHATTER_APP_URL}/api/register`,
                 { name: name, email: email, password: password },
             );
             // alert(response.data.message);

@@ -1,8 +1,9 @@
 import axios from 'axios';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
 import avatarStyle from '../styles/avatars.module.css';
+import dotenv from 'dotenv';
+dotenv.config();
 
 function Avatar()
 {
@@ -26,13 +27,10 @@ function Avatar()
         try
         {
             const userID = localStorage.getItem('ID');
-            // console.log(userID);
-            console.log('avatar',selectedAvatar);
-            
-            const response = await axios.put('http://localhost:3000/api/avatar',
+            const response = await axios.put(`${process.env.CHATTER_APP_URL}/api/avatar`,
                 { avatar: selectedAvatar, userID: userID }
             );
-            console.log('response', response.data);
+            // console.log('response', response.data);
         }
         catch(err)
         {
@@ -42,8 +40,6 @@ function Avatar()
 
     function handleClick(image)
     {
-        console.log(image);
-        console.log('Before state update:', selectedAvatar); // Logs the old value
         setSelectedAvatar(image);
         setTimeout(() => {
             console.log('After state update:', selectedAvatar); // Logs the updated value
