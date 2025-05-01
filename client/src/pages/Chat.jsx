@@ -101,7 +101,7 @@ function Chat()
             const response = await axios.get(`${import.meta.env.VITE_CHATTER_APP_URL_SERVER}/api/chat/retrieveContacts`);
             
             const retrievedContacts = response.data;
-            console.log(retrieveContacts);
+            console.log(response.data);
 
             const ID = localStorage.getItem('ID');
 
