@@ -18,7 +18,7 @@ function Register()
         e.preventDefault();
         try
         {   
-            const response = await axios.post(`${process.env.CHATTER_APP_URL}/api/register`,
+            const response = await axios.post(`${process.env.CHATTER_APP_URL_SERVER}/api/register`,
                 { name: name, email: email, password: password },
             );
             // alert(response.data.message);

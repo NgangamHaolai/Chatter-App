@@ -27,7 +27,7 @@ function Avatar()
         try
         {
             const userID = localStorage.getItem('ID');
-            const response = await axios.put(`${process.env.CHATTER_APP_URL}/api/avatar`,
+            const response = await axios.put(`${process.env.CHATTER_APP_URL_SERVER}/api/avatar`,
                 { avatar: selectedAvatar, userID: userID }
             );
             // console.log('response', response.data);
