@@ -102,7 +102,7 @@ function Chat()
             
             const response = await axios.get(`${import.meta.env.VITE_CHATTER_APP_URL_SERVER}/api/chat/retrieveContacts`);
             const retrievedContacts = response.data;
-            console.log(response);
+            console.log(response.data);
             
             const ID = localStorage.getItem('ID');
 
@@ -312,7 +312,7 @@ function Chat()
                 <div className={chatStyle.sticker} onClick={handleEmojiPicker}>
                     <BsEmojiSmile size={20}/>
                 </div>
-                <input id='inputValue' className={chatStyle.input} onChange={handleInput} value={message} placeholder='message' autoFocus='true' autoComplete='off' ref={inputRef}></input>
+                <input id='inputValue' className={chatStyle.input} onChange={handleInput} value={message} placeholder='message' autoFocus={true} autoComplete='off' ref={inputRef}></input>
                 <button className={chatStyle.send} type='submit'>Send</button>
             </form>
         </div>}
