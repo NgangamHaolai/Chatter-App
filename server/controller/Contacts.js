@@ -13,32 +13,6 @@ const Contacts = async(req, res)=>
 
         // const abs = await messageData.aggregate([
         //     {
-        //         $group: 
-        //         {
-        //             _id: 
-        //             {
-        //                 sender: '$senderID',
-        //                 receiver: '$receiverID',
-        //                 date: '$localDate',
-        //                 // createdAt: '$createdAt',
-        //             },
-        //             latestText: 
-        //             {
-        //                 $max: '$createdAt'
-        //             },
-        //         }
-        //     },
-        //     {
-        //         $project:
-        //         {
-        //             _id: 1,
-        //             message: 1,
-        //             latestText: 1,
-        //         }
-        //     }
-        // ]);
-        // const abs = await messageData.aggregate([
-        //     {
         //       $sort: {
         //         createdAt: -1 // sort newest messages first
         //       }

@@ -4,6 +4,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Avatar from './pages/Avatar';
 import "./styles.css";
+import { Navigate } from 'react-router-dom';
 
 function App() {
 

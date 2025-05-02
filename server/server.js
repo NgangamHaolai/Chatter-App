@@ -21,7 +21,7 @@ app.use(express.json());
 // For express
 app.use(cors({
     origin: [process.env.CHATTER_APP_URL_CLIENT, 'http://localhost:5173'],
-    methods: ['GET', 'POST'],
+    methods: ['GET', 'POST', 'PUT'],
     credentials: true,
 }));
 
@@ -30,7 +30,7 @@ const server = createServer(app);
 const io = new Server(server, {
     cors: {
         origin: [process.env.CHATTER_APP_URL_CLIENT, 'http://localhost:5173'],
-        methods: ['GET', 'POST'],
+        methods: ['GET', 'POST', 'PUT'],
         credentials: true,
     },
 });
@@ -38,7 +38,7 @@ const io = new Server(server, {
 app.use('/api', userRoutes);
 app.use('/api', chat);
 app.use('/api', avatars);
-app.use(express.static('public'));
+
 SocketConnection(io);
 
 server.listen(port, ()=>

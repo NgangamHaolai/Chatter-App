@@ -19,10 +19,7 @@ function Register()
             const response = await axios.post(`${import.meta.env.VITE_CHATTER_APP_URL_SERVER}/api/register`,
                 { name: name, email: email, password: password },
             );
-            // alert(response.data.message);
-            console.log("Reuslt", response.data);
             localStorage.setItem('ID',response.data.newUser._id)
-            
             setRegistered(true);
         }
         catch(err)

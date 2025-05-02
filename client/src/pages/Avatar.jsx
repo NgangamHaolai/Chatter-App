@@ -25,10 +25,10 @@ function Avatar()
         try
         {
             const userID = localStorage.getItem('ID');
+            
             const response = await axios.put(`${import.meta.env.VITE_CHATTER_APP_URL_SERVER}/api/avatar`,
-                { avatar: selectedAvatar, userID: userID }
+                { avatar: selectedAvatar, userID: userID }, {withCredentials: true}
             );
-            // console.log('response', response.data);
         }
         catch(err)
         {
@@ -39,9 +39,6 @@ function Avatar()
     function handleClick(image)
     {
         setSelectedAvatar(image);
-        setTimeout(() => {
-            console.log('After state update:', selectedAvatar); // Logs the updated value
-        }, 0);
     }
     function handleSubmit()
     {
@@ -53,8 +50,7 @@ function Avatar()
     <div className={avatarStyle.body}>
         <div className={avatarStyle.header}>Choose Avatar</div>
         <div className={avatarStyle.container}>
-            {avatars.map((e, index)=>
-            (
+            {avatars.map((e, index)=>( 
             <div className={`${avatarStyle.Avatar} ${selectedAvatar === e ? avatarStyle.selected : " "}`}
                 key={index} onClick={()=>handleClick(e)}>
                 <img className={avatarStyle.avatarImage} src={e} alt='avatar.jpg' />

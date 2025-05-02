@@ -98,14 +98,9 @@ function Chat()
     {
         try
         {
-            console.log(import.meta.env.VITE_CHATTER_APP_URL_SERVER);
-            
             const response = await axios.get(`${import.meta.env.VITE_CHATTER_APP_URL_SERVER}/api/chat/retrieveContacts`);
             const retrievedContacts = response.data;
-            console.log(response.data);
-            
             const ID = localStorage.getItem('ID');
-
             if(!ID)
             {
                 return navigate('/login');

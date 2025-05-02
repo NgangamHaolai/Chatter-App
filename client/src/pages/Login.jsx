@@ -30,10 +30,7 @@ function Login()
             const response = await axios.post(`${import.meta.env.VITE_CHATTER_APP_URL_SERVER}/api/login`, 
                 {username: username, password: password},
             );
-            // alert(response.data.message);
-            // console.log("the id:",response.data.userID);
             localStorage.setItem('ID', response.data.userID);
-            // console.log(response.data);
             setLoggedIn(true);
             successRef.current.focus();
         }

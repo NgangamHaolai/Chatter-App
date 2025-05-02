@@ -5,8 +5,7 @@ const StoreMessages = async({ toUserID, fromUserID, message })=>
 {
     try
     {
-        console.log("TOUserID:", toUserID,"FromUserID:", fromUserID,"the_Text:", message);
-        
+        // console.log("TOUserID:", toUserID,"FromUserID:", fromUserID,"the_Text:", message);
         const findsender = await userData.findOne({ _id: fromUserID }).select('name');
         const findreceiver = await userData.findOne({ _id: toUserID }).select('name');
 
@@ -28,7 +27,7 @@ const StoreMessages = async({ toUserID, fromUserID, message })=>
 const RetrieveMessages = async(req, res)=>
 {
     const { selectedUserID, currentUserID } = req.query;
-    console.log('currentID:',currentUserID, "selectedUserID:",selectedUserID);
+    // console.log('currentID:',currentUserID, "selectedUserID:",selectedUserID);
     try
     {
         const result = await messageData.find(
