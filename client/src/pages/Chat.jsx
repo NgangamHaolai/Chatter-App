@@ -52,8 +52,22 @@ function Chat()
             const vh = window.innerHeight * 0.01;
             document.documentElement.style.setProperty('--vh', `${vh}px`);
         }
-        handleHeightResize();
-        window.addEventListener("resize", handleHeightResize);
+        // handleHeightResize();
+        window.addEventListener("load", handleHeightResize);
+    }, []);
+
+    useEffect(()=>
+    {
+        const handleBackButton = (e)=>
+        {
+            e.preventDefault();
+            if(showChat)
+            {
+                setShowChat(false);
+            }
+        }
+        window.addEventListener("popstate", handleBackButton);
+        return()=> window.removeEventListener("popstate", handleBackButton);
     }, []);
 
     function handleEmojiClick(e)
@@ -123,7 +137,10 @@ function Chat()
             const newContacts = [...retrievedContacts.slice(0, index), ...retrievedContacts.slice(index+1)]
             setContacts(newContacts);
             // set the first contact in the array as the default selected Contact.
-            handleSelectedUser(newContacts[0]._id, newContacts[0].name, newContacts[0].avatar);
+            if(isDesktopView)
+            {
+                handleSelectedUser(newContacts[0]._id, newContacts[0].name, newContacts[0].avatar);
+            }
         }
         catch(err)
         {
