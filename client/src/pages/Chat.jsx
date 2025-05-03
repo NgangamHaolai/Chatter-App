@@ -36,38 +36,13 @@ function Chat()
 
     useEffect(()=>
     {
-        const handleWidthResize = ()=>
+        const handleResize = ()=>
         {
             setIsSmartphoneView(window.innerWidth < 700); // is screen is resized to less than 768px then is set to true.
             setIsDesktopView(window.innerWidth > 700);  // when screen width larger than 700px then its desktop size.
         };
-        window.addEventListener("resize", handleWidthResize);
-        return ()=> window.removeEventListener("resize", handleWidthResize); // return function cleans up the listener when the component unmounts — preventing memory leaks.
-    }, []);
-
-    useEffect(()=>
-    {                   
-        const handleHeightResize = ()=> // to handle smartphone screen innerHeight issue caused due to browser bar and navigation bar.
-        {                               // also set fix chats in static position when keyboard is opened.
-            const vh = window.visualViewport?.height || window.innerHeight;
-            document.documentElement.style.setProperty('--vh', `${vh * 0.01}px`);
-        }
-        // handleHeightResize();
-        window.addEventListener("load", handleHeightResize);
-    }, []);
-
-    useEffect(()=>
-    {
-        const handleBackButton = (e)=>
-        {
-            e.preventDefault();
-            if(showChat)
-            {
-                setShowChat(false);
-            }
-        }
-        window.addEventListener("popstate", handleBackButton);
-        return()=> window.removeEventListener("popstate", handleBackButton);
+        window.addEventListener("resize", handleResize);
+        return ()=> window.removeEventListener("resize", handleResize); // return function cleans up the listener when the component unmounts — preventing memory leaks.
     }, []);
 
     function handleEmojiClick(e)
