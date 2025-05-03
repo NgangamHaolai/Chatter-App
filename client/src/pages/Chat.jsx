@@ -41,8 +41,19 @@ function Chat()
             setIsSmartphoneView(window.innerWidth < 700); // is screen is resized to less than 768px then is set to true.
             setIsDesktopView(window.innerWidth > 700);  // when screen width larger than 700px then its desktop size.
         };
-        window.addEventListener("resize", handleResize);
-        return ()=> window.removeEventListener("resize", handleResize); // return function cleans up the listener when the component unmounts — preventing memory leaks.
+        window.addEventListener("resize", handleWidthResize);
+        return ()=> window.removeEventListener("resize", handleWidthResize); // return function cleans up the listener when the component unmounts — preventing memory leaks.
+    }, []);
+
+    useEffect(()=>
+    {
+        const handleHeightResize = ()=> // to handle smartphone screen innerHeight issue caused due to browser bar and navigation bar.
+        {
+            const vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }
+        handleHeightResize();
+        window.addEventListener("resize", handleHeightResize);
     }, []);
 
     function handleEmojiClick(e)
@@ -112,10 +123,7 @@ function Chat()
             const newContacts = [...retrievedContacts.slice(0, index), ...retrievedContacts.slice(index+1)]
             setContacts(newContacts);
             // set the first contact in the array as the default selected Contact.
-            if(isDesktopView)
-            {
-                handleSelectedUser(newContacts[0]._id, newContacts[0].name, newContacts[0].avatar);
-            }
+            handleSelectedUser(newContacts[0]._id, newContacts[0].name, newContacts[0].avatar);
         }
         catch(err)
         {
