@@ -1,0 +1,165 @@
+[33mcommit 984522a27990a53a23c7da9e821e7d6285530c90[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Ngangam Haolai <you@example.com>
+Date:   Fri May 2 22:50:48 2025 +0530
+
+    keyboard pop fix back button fix
+
+[33mcommit 7b99053e20c90fec8032212ba873fec306bb3d03[m
+Author: Ngangam Haolai <you@example.com>
+Date:   Fri May 2 21:24:05 2025 +0530
+
+    Phone Interface Height Update 1.0
+
+[33mcommit d428b61ba919ceba0d180449ff1a61bb4cf60baa[m
+Author: Ngangam Haolai <you@example.com>
+Date:   Fri May 2 17:21:39 2025 +0530
+
+    added PUT to CORS origin method
+
+[33mcommit eb1db0ca29989b87ba2720f2dca82cc3caa810e3[m
+Author: Ngangam Haolai <you@example.com>
+Date:   Fri May 2 12:52:54 2025 +0530
+
+    trying to re-deploy to see if it works
+
+[33mcommit 3705ec4b4ff4ac8afb24c257cba1bdb8c14db097[m
+Author: Ngangam Haolai <you@example.com>
+Date:   Fri May 2 07:18:05 2025 +0530
+
+    still no fix 10 hours spent 7:20 am
+
+[33mcommit 89b937e03b06f48d3e2fa5fb1a4e0b7e385d2bb7[m
+Author: Ngangam Haolai <you@example.com>
+Date:   Fri May 2 04:56:33 2025 +0530
+
+    another attempt to fix
+
+[33mcommit 469e1eb3e063d5b8db87b4da43f0c40bc85d634d[m
+Author: Ngangam Haolai <you@example.com>
+Date:   Fri May 2 03:54:36 2025 +0530
+
+    removed $ from cors: origin url
+
+[33mcommit 0df70c4e58a6879f2324ce8a43cc0adf810c092c[m
+Author: Ngangam Haolai <you@example.com>
+Date:   Fri May 2 03:26:31 2025 +0530
+
+    moved .env file to client/.env from src/.env
+
+[33mcommit b50d9ca908f7c67b512730b161a4ab120d07fe52[m
+Author: Ngangam Haolai <you@example.com>
+Date:   Fri May 2 03:15:15 2025 +0530
+
+    renamed main:server.js from index.js
+
+[33mcommit 69611c069c40a76e2da763f380c683c6dede1800[m
+Author: Ngangam Haolai <you@example.com>
+Date:   Fri May 2 02:54:46 2025 +0530
+
+    removed spacing in .env files
+
+[33mcommit e6a23b83ac413681477bfc0219453eb689e3f1bb[m
+Author: Ngangam Haolai <you@example.com>
+Date:   Fri May 2 02:39:37 2025 +0530
+
+    fixed an error
+
+[33mcommit c99c031126498c8c9f679dae7d5a484bd47eb961[m
+Author: Ngangam Haolai <you@example.com>
+Date:   Fri May 2 02:22:33 2025 +0530
+
+    undid server .env to process.env
+
+[33mcommit d7e1ee891f6261bbd80fd7ab08795d17f5ec4ec9[m
+Author: Ngangam Haolai <you@example.com>
+Date:   Fri May 2 02:09:16 2025 +0530
+
+    renamed process.env to import.meta.env to fix 404 error
+
+[33mcommit 3c8c47ef794b84a7e22ceaa3d815e108046f84ab[m
+Author: Ngangam Haolai <you@example.com>
+Date:   Fri May 2 01:48:46 2025 +0530
+
+    another effort to fix 404 error
+
+[33mcommit b46275a421ae069e75c0b09979a5597692325f39[m
+Author: Ngangam Haolai <you@example.com>
+Date:   Fri May 2 00:53:28 2025 +0530
+
+    forgot to update new server URL
+
+[33mcommit 92e3e14a31872074049be87d0b4cad89088f0a26[m
+Author: Ngangam Haolai <you@example.com>
+Date:   Fri May 2 00:41:42 2025 +0530
+
+    fixed SPA (Single Page Application) routing issue
+
+[33mcommit aef8fde6ff56ddf60a61157b4cc5a4b2bfdc8ed7[m
+Author: Ngangam Haolai <you@example.com>
+Date:   Fri May 2 00:08:38 2025 +0530
+
+    updated client URL
+
+[33mcommit 0a016a3df51b514f2dc1c010dc8f147ac64a3125[m
+Author: Ngangam Haolai <you@example.com>
+Date:   Thu May 1 23:47:43 2025 +0530
+
+    Home page was deleted and updated
+
+[33mcommit fcbbd280c307a4aa74b2757c4f50dcc038c8901d[m
+Merge: 4980cea 6c155ab
+Author: Ngangam Haolai <you@example.com>
+Date:   Thu May 1 23:28:38 2025 +0530
+
+    updated front-end routes
+
+[33mcommit 4980ceaaac78d55f3088875519247e5a0901c433[m
+Author: Ngangam Haolai <you@example.com>
+Date:   Thu May 1 23:18:57 2025 +0530
+
+    updated old client routes to new renderAPI routes
+
+[33mcommit 6c155ab14afa973fd20561701faf7009194e6756[m
+Author: NgangamHaolai <73635394+NgangamHaolai@users.noreply.github.com>
+Date:   Thu May 1 22:06:53 2025 +0530
+
+    Delete server/index.js
+
+[33mcommit d9db6b50d2bee13eda35ac9ca2cb15f10cbee8ff[m
+Merge: 40dc9b4 baae34d
+Author: Ngangam Haolai <you@example.com>
+Date:   Thu May 1 22:00:12 2025 +0530
+
+    renamed index.js to server.js
+
+[33mcommit 40dc9b46e2247ecfe361170a71034fde7c1403d6[m
+Author: Ngangam Haolai <you@example.com>
+Date:   Thu May 1 21:10:20 2025 +0530
+
+    i have lost count
+
+[33mcommit baae34df7553626dd2416753ddfcb7b238c59f7e[m
+Author: NgangamHaolai <73635394+NgangamHaolai@users.noreply.github.com>
+Date:   Thu May 1 20:32:40 2025 +0530
+
+    Delete client/src/Atlas password
+    
+    this shouldn't even be here in the first place
+
+[33mcommit 1814caf2c370f9f7f6d51608a7796d3da0ba1fdd[m
+Author: Ngangam Haolai <you@example.com>
+Date:   Thu May 1 19:32:06 2025 +0530
+
+    update .gitignore to exclude node_modules
+
+[33mcommit d324accc697d92bfed250baa0c0d1f8973939bec[m
+Author: Ngangam Haolai <you@example.com>
+Date:   Thu May 1 19:18:23 2025 +0530
+
+    Add .gitignore and remove ignored files
+
+[33mcommit f9c9264a238a2a371ee7aadd8008d87da8465433[m
+Author: Ngangam Haolai <you@example.com>
+Date:   Thu May 1 18:49:41 2025 +0530
+
+    Added my project

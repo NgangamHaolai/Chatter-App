@@ -52,22 +52,8 @@ function Chat()
             const vh = window.innerHeight * 0.01;
             document.documentElement.style.setProperty('--vh', `${vh}px`);
         }
-        // handleHeightResize();
-        window.addEventListener("load", handleHeightResize);
-    }, []);
-
-    useEffect(()=>
-    {
-        const handleBackButton = (e)=>
-        {
-            e.preventDefault();
-            if(showChat)
-            {
-                setShowChat(false);
-            }
-        }
-        window.addEventListener("popstate", handleBackButton);
-        return()=> window.removeEventListener("popstate", handleBackButton);
+        handleHeightResize();
+        window.addEventListener("resize", handleHeightResize);
     }, []);
 
     function handleEmojiClick(e)
