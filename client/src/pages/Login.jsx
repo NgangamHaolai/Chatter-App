@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import login from "../styles/login.module.css";
 import { useNavigate } from "react-router-dom";
 
@@ -12,8 +12,26 @@ function Login()
     const [passwordError, setPasswordError] = useState("");
 
     const successRef = useRef(null);
-    const [ loggedIn, setLoggedIn ] = useState(false);
+    const [loggedIn, setLoggedIn] = useState(false);
 
+    useEffect(()=>
+    {
+        const timeout = setTimeout(()=>
+        {
+            setUsernameError("");
+        }, 3000);
+        return ()=> clearTimeout(timeout);
+    }, [usernameError]);
+
+    useEffect(()=>
+    {
+        const timeout = setTimeout(()=>
+        {
+            setPasswordError("");
+        }, 3000);
+        return ()=> clearTimeout(timeout);
+    }, [passwordError]);
+    
     function handleUsername(e)
     {
         setUsername(e.target.value);

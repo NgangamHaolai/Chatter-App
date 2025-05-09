@@ -23,6 +23,7 @@
 }
 .content
 {
+    margin-top: 1.5rem;
     text-align: center;
     font-family: cursive;
 }
@@ -30,6 +31,7 @@
 {
     display: block;
     margin: 1rem;
+    margin-bottom: 0;
     height: 2rem;
     border-radius: 3px;
     border: none;
@@ -58,6 +60,14 @@
     box-shadow: 0px 0px 5px white;
     cursor: pointer;
     color: rgb(54, 108, 54);
+}
+.error
+{
+    color: red;
+    position: absolute;
+    margin: 0;
+    font-size: medium;
+    margin-left: 1.5rem;
 }
 .success
 {
